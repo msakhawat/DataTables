@@ -5119,9 +5119,9 @@
 			len = settings._iDisplayLength;
 	
 		/* If we have space to show extra rows (backing up from the end point - then do so */
-		if ( end === settings.fnRecordsDisplay() )
+		if ( start >= end )
 		{
-			start = end - (end % len);
+     			start = end - len;
 		}
 	
 		if ( len === -1 || start < 0 )
